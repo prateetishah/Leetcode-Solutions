@@ -34,12 +34,14 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
 """
 
 
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        hmap = {}
 
-        for i, n in enumerate(nums):
-            if n in hmap:
-                return [hmap[n], i]
-            else:
-                hmap[target - n] = i
+def twoSum(nums,target):
+    hmap = {}
+
+    for i, n in enumerate(nums):
+        if n in hmap:
+            return [hmap[n], i]
+        else:
+            hmap[target - n] = i
+nums = [1,2,3,7]
+print(twoSum(nums,5))
